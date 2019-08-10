@@ -10,7 +10,7 @@ RUN \
     yum -y reinstall glibc-common && \
     localedef -c -f UTF-8 -i zh_CN zh_CN.utf8 &&\
     export LC_ALL=zh_CN.utf8 && \
-    yum install openssh-server -y && \
+    yum install openssh-server git telnet newt -y && \
     yum clean all && \
     mkdir /var/run/sshd && \
     ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key && \
